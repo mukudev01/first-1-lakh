@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>Payment Successful — The First ₹1 Lakh</title>
+
+  <meta
+    name="description"
+    content="Your payment was successful. Download The First ₹1 Lakh ebook."
+  />
+
+  <meta name="theme-color" content="#07111f" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --navy: #07111f;
+      --navy-2: #0d1b2e;
+      --green: #16a36a;
+      --green-dark: #08764a;
+      --green-soft: #e8f7ef;
+      --saffron: #f29f38;
+      --white: #ffffff;
+      --soft: #f7f5ef;
+      --ink: #101828;
+      --muted: #667085;
+      --border: #e6e8eb;
+      --shadow: 0 25px 70px rgba(7, 17, 31, 0.14);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: "Inter", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(
+          circle at 50% -10%,
+          rgba(22, 163, 106, 0.13),
+          transparent 35%
+        ),
+        var(--soft);
+      display: flex;
+      flex-direction: column;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .page {
+      width: min(calc(100% - 36px), 760px);
+      margin: auto;
+      padding: 42px 0;
+    }
+
+    .brand {
+      text-align: center;
+      color: var(--navy);
+      font-family: "Manrope", sans-serif;
+      font-size: 17px;
+      font-weight: 800;
+      margin-bottom: 28px;
+    }
+
+    .brand span {
+      color: var(--green);
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 34px 24px;
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .success-icon {
+      width: 76px;
+      height: 76px;
+      margin: 0 auto 24px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--green-soft);
+      color: var(--green-dark);
+      font-family: "Manrope", sans-serif;
+      font-size: 36px;
+      font-weight: 800;
+      border: 7px solid #f1fbf5;
+    }
+
+    h1 {
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(32px, 7vw, 48px);
+      line-height: 1.1;
+      letter-spacing: -0.04em;
+      color: var(--navy);
+    }
+
+    .subtitle {
+      max-width: 570px;
+      margin: 17px auto 0;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .download-box {
+      margin-top: 30px;
+      padding: 25px;
+      border-radius: 20px;
+      background: var(--navy);
+      color: white;
+    }
+
+    .download-box h2 {
+      font-family: "Manrope", sans-serif;
+      font-size: 20px;
+    }
+
+    .download-box p {
+      color: #aab7c8;
+      font-size: 13px;
+      margin: 7px 0 19px;
+    }
+
+    .btn {
+      display: inline-flex;
+      min-height: 52px;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 14px 22px;
+      border-radius: 13px;
+      font-size: 14px;
+      font-weight: 800;
+      background: var(--green);
+      color: white;
+      box-shadow: 0 12px 28px rgba(22, 163, 106, 0.24);
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      background: #128e5c;
+    }
+
+    .save-note {
+      margin-top: 15px;
+      color: #8391a2;
+      font-size: 11px;
+    }
+
+    .next {
+      text-align: left;
+      margin-top: 32px;
+      padding-top: 30px;
+      border-top: 1px solid var(--border);
+    }
+
+    .next h2 {
+      font-family: "Manrope", sans-serif;
+      font-size: 21px;
+      margin-bottom: 15px;
+    }
+
+    .next ol {
+      list-style: none;
+      display: grid;
+      gap: 12px;
+      counter-reset: steps;
+    }
+
+    .next li {
+      counter-increment: steps;
+      display: grid;
+      grid-template-columns: 32px 1fr;
+      align-items: center;
+      gap: 10px;
+      color: #475467;
+      font-size: 14px;
+    }
+
+    .next li::before {
+      content: counter(steps);
+      width: 30px;
+      height: 30px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--saffron);
+      color: #39250d;
+      font-weight: 800;
+      font-size: 12px;
+    }
+
+    .support {
+      margin-top: 27px;
+      padding: 17px;
+      border-radius: 15px;
+      background: var(--soft);
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .support a {
+      color: var(--green-dark);
+      font-weight: 700;
+    }
+
+    .disclaimer {
+      margin-top: 24px;
+      color: #8a95a4;
+      font-size: 10px;
+      line-height: 1.6;
+    }
+
+    footer {
+      margin-top: 25px;
+      text-align: center;
+      color: #929ba8;
+      font-size: 10px;
+      line-height: 1.6;
+    }
+
+    @media (min-width: 700px) {
+      .page {
+        padding: 60px 0;
+      }
+
+      .card {
+        padding: 52px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================================================
+       IMPORTANT PLACEHOLDERS TO REPLACE BEFORE PUBLISHING
+
+       SECURE EBOOK DOWNLOAD URL:
+       [PASTE_SECURE_EBOOK_DOWNLOAD_LINK_HERE]
+
+       SUPPORT EMAIL:
+       [PASTE_SUPPORT_EMAIL_HERE]
+
+       BRAND NAME:
+       [PASTE_BRAND_NAME_HERE]
+
+       IMPORTANT:
+       Configure your payment gateway to redirect successful
+       payments to:
+
+       [PASTE_YOUR_THANK_YOU_PAGE_URL_HERE]
+       ========================================================= -->
+
+  <main class="page">
+
+    <div class="brand">
+      [PASTE_BRAND_NAME_HERE]<span>.</span>
+    </div>
+
+    <section class="card">
+
+      <!-- Success icon -->
+      <div class="success-icon" aria-label="Payment successful">
+        ✓
+      </div>
+
+      <h1>
+        Payment Successful —
+        Your Money Journey Starts Now.
+      </h1>
+
+      <p class="subtitle">
+        Thank you for getting <strong>The First ₹1 Lakh</strong>.
+        Your ebook is ready to download.
+      </p>
+
+      <div class="download-box">
+
+        <h2>
+          Your ebook is ready
+        </h2>
+
+        <p>
+          Download and save your copy so you can work through the guide
+          at your own pace.
+        </p>
+
+        <!-- =====================================================
+             SECURE DOWNLOAD BUTTON
+
+             Replace:
+             [PASTE_SECURE_EBOOK_DOWNLOAD_LINK_HERE]
+             ===================================================== -->
+
+        <a
+          class="btn"
+          href="[PASTE_SECURE_EBOOK_DOWNLOAD_LINK_HERE]"
+        >
+          Download Your Ebook
+          <span>↓</span>
+        </a>
+
+        <p class="save-note">
+          Please save this ebook to your phone, tablet, or computer
+          for easy access.
+        </p>
+
+      </div>
+
+      <div class="next">
+
+        <h2>
+          What to do next
+        </h2>
+
+        <ol>
+          <li>
+            Download and save your ebook
+          </li>
+
+          <li>
+            Start with Chapter 1 today
+          </li>
+
+          <li>
+            Pick your personal ₹1 lakh target date
+          </li>
+
+          <li>
+            Complete the 90-Day Sprint step by step
+          </li>
+        </ol>
+
+      </div>
+
+      <div class="support">
+        If your payment was successful but the download does not open,
+        please contact
+        <a href="mailto:[PASTE_SUPPORT_EMAIL_HERE]">
+          [PASTE_SUPPORT_EMAIL_HERE]
+        </a>.
+      </div>
+
+      <p class="disclaimer">
+        This ebook is for educational purposes and is not personalised
+        financial, tax, or legal advice.
+      </p>
+
+    </section>
+
+    <footer>
+      © <span id="year"></span> [PASTE_BRAND_NAME_HERE].
+      All rights reserved.
+    </footer>
+
+  </main>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
