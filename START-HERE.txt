@@ -1,0 +1,65 @@
+KUBER BOUTIQUE — START HERE
+============================
+
+This is a Savana-inspired boutique storefront starter: clean category browsing,
+large editorial product cards, filters, search, sample INR prices, and an order
+form shown before payment. The visual direction is inspired by the reference;
+the branding and layout are original for Kuber Boutique.
+
+FILES
+-----
+index.html              The page structure.
+styles.css              Colours, layout, typography and mobile styling.
+script.js               Sample categories, products, prices, images and order URL.
+google-apps-script.gs   Optional small Google Sheets order receiver.
+
+HOW TO CHANGE PRODUCTS AND PRICES
+---------------------------------
+1. Open script.js in a text editor.
+2. Find the PRODUCTS list near the top.
+3. Change name, category, price, compareAt, tag and sizes for each item.
+   Prices are sample values in rupees. compareAt is the crossed-out price.
+4. Keep each product's sku unique. Copy the same SKU, name, category and price
+   into ORDER_PRODUCTS in google-apps-script.gs if you connect the Sheet.
+
+HOW TO ADD YOUR PHOTOS
+----------------------
+1. Create a folder called images beside index.html.
+2. Put your product photo files in that folder.
+3. For that product in script.js, replace image:"" with e.g.
+   image:"images/paithani-saree.jpg"
+4. Use a vertical photo when possible. The product cards crop photos to fit.
+   Until you add photos, the cards show a coordinated illustrated placeholder.
+
+HOW TO CONNECT ORDERS TO A GOOGLE SHEET
+---------------------------------------
+1. Create a Google Sheet for boutique orders.
+2. In that Sheet choose Extensions > Apps Script.
+3. Paste in the contents of google-apps-script.gs. Replace
+   PASTE_GOOGLE_SHEET_ID_HERE with the ID in your Sheet's address bar.
+4. In ORDER_PRODUCTS, paste the matching hosted payment URL into paymentUrl for
+   each product. The payment link must charge the same price as the product.
+5. In Apps Script choose Deploy > New deployment > Web app. Set “Execute as” to
+   yourself and access to “Anyone”, then deploy and copy the URL ending in /exec.
+   Google will ask you to authorize this script to add rows to your Sheet.
+6. Paste the URL into orderEndpoint near the top of script.js.
+7. Keep the product prices and payment-link amounts in sync. The order amount is
+   set in the Apps Script product list; the provider's hosted page takes payment.
+
+BEFORE YOU TAKE REAL ORDERS
+---------------------------
+- The site is a static front end. The order form currently runs in preview mode
+  and sends or saves no details until you connect the Google Apps Script URL.
+- A payment link is also a sample until you add your own provider URLs in the
+  Apps Script product list. Use the provider's dashboard to verify payment before
+  dispatching an order.
+- Check that you can access your Google Sheet and Apps Script deployment from a
+  different browser or phone before sharing the storefront with customers.
+- Update the sample delivery, exchange and contact wording in index.html to match
+  your actual store policies and contact details.
+
+TO OPEN THE SITE
+----------------
+Open index.html in a web browser. You can preview the design without setting up
+the Google Sheet or payment links. Google Fonts need an internet connection;
+the rest of the page is included in this folder.
