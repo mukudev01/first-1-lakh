@@ -12,7 +12,7 @@
 
   <meta
     name="description"
-    content="Your order is confirmed. Download How to Attract Women: Change Inside and Outside."
+    content="Your order is confirmed. Your ebook will be sent to your email address."
   />
 
   <meta name="theme-color" content="#203329" />
@@ -122,7 +122,7 @@
       font-size: 15px;
     }
 
-    .download-box {
+    .delivery-box {
       margin: 35px 0;
       padding: 25px;
       border-radius: 20px;
@@ -130,44 +130,15 @@
       color: white;
     }
 
-    .download-box h2 {
+    .delivery-box h2 {
       font-family: "Playfair Display", serif;
       font-size: 27px;
       margin-bottom: 9px;
     }
 
-    .download-box p {
-      color: #c4cbc3;
-      font-size: 13px;
-      margin-bottom: 20px;
-    }
-
-    .download-button {
-      width: 100%;
-      min-height: 56px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0 25px;
-      border-radius: 999px;
-      background: #f3eee3;
-      color: var(--forest-dark);
+    .delivery-box p {
+      color: #e0e5de;
       font-size: 14px;
-      font-weight: 800;
-      transition:
-        transform 180ms ease,
-        box-shadow 180ms ease;
-    }
-
-    .download-button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.2);
-    }
-
-    .save-note {
-      margin-top: 14px;
-      color: #9fa89e;
-      font-size: 11px;
     }
 
     .start {
@@ -226,13 +197,8 @@
         padding: 60px;
       }
 
-      .download-box {
+      .delivery-box {
         padding: 34px;
-      }
-
-      .download-button {
-        width: auto;
-        min-width: 280px;
       }
     }
 
@@ -267,46 +233,21 @@
         <strong>
           How to Attract Women: Change Inside and Outside
         </strong>.
-        Your ebook is ready to download.
+        Your ebook delivery details are below.
       </p>
 
-      <!-- ====================================================
-           DOWNLOAD SECTION
-           ==================================================== -->
-
-      <div class="download-box">
+      <div class="delivery-box">
 
         <h2>
-          Your Ebook Is Ready
+          Your Ebook Is on Its Way
         </h2>
 
         <p>
-          Download your copy and keep it somewhere easy to access.
+          We’ll send your ebook to the email address you provided at checkout.
+          Please check your inbox, including your spam or junk folder, for the
+          delivery email. We hope you enjoy reading and find the guide helpful
+          as you build confidence, connection, and a thoughtful approach to dating.
         </p>
-
-        <!--
-          SECURE DOWNLOAD LINK PLACEHOLDER:
-
-          Replace:
-          [SECURE_EBOOK_DOWNLOAD_LINK]
-
-          with your secure ebook download URL.
-
-          IMPORTANT:
-          This download link appears ONLY on this page.
-        -->
-        <a
-          class="download-button"
-          href="[SECURE_EBOOK_DOWNLOAD_LINK]"
-          id="downloadButton"
-        >
-          Download Your Ebook
-        </a>
-
-        <div class="save-note">
-          Save the ebook to your phone, tablet, or computer so you can
-          return to it whenever you need it.
-        </div>
 
       </div>
 
@@ -322,7 +263,7 @@
 
         <ol>
           <li>
-            Download and save your ebook.
+            Look out for the ebook delivery email in your inbox.
           </li>
 
           <li>
@@ -346,7 +287,7 @@
 
       <div class="support">
 
-        If your payment was successful but the download does not open,
+        If your payment was successful but you do not receive the ebook email,
         contact
 
         <!--
@@ -386,9 +327,6 @@
       PAYMENT GATEWAY REDIRECT URL:
       [THANK_YOU_PAGE_URL]
 
-      SECURE EBOOK DOWNLOAD:
-      [SECURE_EBOOK_DOWNLOAD_LINK]
-
       SUPPORT EMAIL:
       [mukherjeeankitkumar@gmail.com]
 
@@ -399,18 +337,11 @@
 
     const CONFIG = {
       thankYouUrl: "[THANK_YOU_PAGE_URL]",
-      downloadUrl: "[SECURE_EBOOK_DOWNLOAD_LINK]",
       supportEmail: "[mukherjeeankitkumar@gmail.com]",
       brandName: "[grabyournest]"
     };
 
-    /*
-      Apply the secure download URL.
-    */
-    document.getElementById("downloadButton").href =
-      CONFIG.downloadUrl;
-
-    /*
+/*
       Current year.
     */
     document.getElementById("year").textContent =
